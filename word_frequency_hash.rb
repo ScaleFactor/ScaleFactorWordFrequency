@@ -13,7 +13,7 @@ file = File.open(fileName, "r")
 counter = {}
 while !file.eof?
 	line = file.readline
-	words = line.scan(/\w+/)
+	words = line.scan(/\w+'?\w*/)
 	words.each do |word|
 		if counter[word.downcase].nil?
 			counter[word.downcase] = 1
