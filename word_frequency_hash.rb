@@ -1,6 +1,6 @@
 # Author : Daniel Croy
 # Date : 07/15/17
-# Word Frequency 
+# Word Frequency Hash
 
 if ARGV.length != 1
 	puts "Incorrect number of arguments."
@@ -22,7 +22,8 @@ while !file.eof?
 		end
 	end
 end
+longest_word = counter.keys.max_by {|word| word.length}
 counter.each do |word, count|
-	puts "#{word} : #{count}"
+	puts "#{word}".ljust(longest_word.length) + " : #{count}"
 end
 
