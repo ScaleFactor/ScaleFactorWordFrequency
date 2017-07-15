@@ -4,7 +4,7 @@
 
 if ARGV.length != 1
 	puts "Incorrect number of arguments."
-	puts "Usage: ruby wordFrequencyList.rb InputFile.txt\n"
+	puts "Usage: ruby word_frequency_hash.rb \"InputFile.txt\"\n"
 	exit
 end
 
